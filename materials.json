@@ -1,0 +1,32 @@
+{
+  "elements": {
+    "H": {"Z": 1, "A": 1.008},
+    "C": {"Z": 6, "A": 12.011},
+    "N": {"Z": 7, "A": 14.007},
+    "O": {"Z": 8, "A": 15.999},
+    "Si": {"Z": 14, "A": 28.085},
+    "Ti": {"Z": 22, "A": 47.867},
+    "In": {"Z": 49, "A": 114.82},
+    "Sn": {"Z": 50, "A": 118.71},
+    "I": {"Z": 53, "A": 126.90},
+    "Pb": {"Z": 82, "A": 207.2}
+  },
+  "predefined_compounds": {
+    "MAPI (CH3NH3PbI3 Perovskite)": {
+      "composition": {"C": 1, "H": 6, "N": 1, "Pb": 1, "I": 3},
+      "density": 4.16
+    },
+    "ITO (Indium Tin Oxide)": {
+      "composition": {"In": 2, "Sn": 1, "O": 3}, 
+      "density": 7.14
+    },
+    "Quartz Glass (SiO2)": {
+      "composition": {"Si": 1, "O": 2},
+      "density": 2.20
+    },
+    "Titanium Dioxide (TiO2)": {
+      "composition": {"Ti": 1, "O": 2},
+      "density": 4.23
+    }
+  }
+}
