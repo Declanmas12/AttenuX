@@ -97,9 +97,21 @@ def get_material_metrics(composition, density):
     
     return z_eff, molar_mass, mu_profile, photo, compton, pair, triplet
 
-# --- 4. Streamlit UI Window Layout Init ---
-st.set_page_config(page_title="Multi-Layer X-Ray Simulator", layout="wide")
-st.title("🔬 Advanced Polylayer X-Ray Attenuation & Interaction Simulator")
+# --- 4. Streamlit UI Layout Configuration ---
+st.set_page_config(page_title="AttenuX - Multi-Layer X-Ray Simulator", layout="wide")
+
+# Read and display the ultra-wide vector logo banner
+try:
+    with open("AttenuX_Banner.svg", "r") as f:
+        svg_code = f.read()
+    st.logo(svg_code)
+    # Instructs Streamlit to let the wide banner match the app window boundaries natively
+    st.image(svg_code, use_container_width=True)
+except FileNotFoundError:
+    st.title("🔬 AttenuX")
+    st.caption("MULTILAYER X-RAY SIMULATOR")
+
+st.markdown("<br>", unsafe_allow_html=True) # Elegant spatial buffer
 
 # Persistent Session State Structural Array Tracking
 if "layers" not in st.session_state:
