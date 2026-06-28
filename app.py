@@ -362,7 +362,7 @@ with stability_tab:
             y_pos = np.arange(len(layer_names_display))
             
             # Color map scaling from cool (low absorption) to dangerous hot red (high absorption)
-            colors = plt.cm.get_cmap('YlOrRd')(np.array(layer_absorptions) / max(max(layer_absorptions), 1.0))
+            colors = plt.colormaps['YlOrRd'](np.array(layer_absorptions) / max(max(layer_absorptions), 1.0))
             
             bars = ax3.barh(y_pos, layer_absorptions, color=colors, edgecolor='#374151', height=0.6)
             
